@@ -191,9 +191,9 @@ function HarpoonList:next(opts)
     self._index = self._index + 1
     if self._index > #self.items then
         if opts.ui_nav_wrap then
-            self._index = 1
-        else
             self._index = #self.items
+        else
+            self._index = 1
         end
     end
 
@@ -208,9 +208,9 @@ function HarpoonList:prev(opts)
     self._index = self._index - 1
     if self._index < 1 then
         if opts.ui_nav_wrap then
-            self._index = #self.items
-        else
             self._index = 1
+        else
+            self._index = #self.items
         end
     end
 
