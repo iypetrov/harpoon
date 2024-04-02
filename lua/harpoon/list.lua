@@ -251,4 +251,9 @@ function HarpoonList.decode(list_config, name, items)
     return HarpoonList:new(list_config, name, list_items)
 end
 
+---@return number
+function HarpoonList:get_current_index()
+    return #self._index
+end
+
 return HarpoonList
